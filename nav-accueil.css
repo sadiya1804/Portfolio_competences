@@ -1,0 +1,333 @@
+/* et le margin et le padding à 0 sur "*" pour que la page occupe entiérement l'écran sans dépassement 
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ce style permet d'enlever la barre de scroll horizontale 
+html{
+    overflow-x: hidden;
+}
+/****/
+
+
+ 
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+ 
+  
+  a {
+    text-decoration: none;
+  }
+
+ 
+  
+  .list-unstyled {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  
+  .container {
+    padding: 1rem 2rem;
+   
+  }
+  
+  .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .grid__item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  @media screen and (min-width:750px) {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+  
+    .grid__item {
+      max-width: 50%;
+    }
+  }
+  
+  
+  
+
+.header {
+    background: rgba(0, 0, 0, 0.123);
+    border-bottom: 1px solid #EEE;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-body);
+    margin: 0;
+    width: 100vw;
+    height: 62px;
+    
+  }
+  
+  .header .logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    color: rgb(220, 200, 193);
+
+  }
+  
+  
+  .header li {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .5rem;
+  }
+  
+  .header a {
+    color:rgb(229, 154, 129);
+  }
+  
+  .header a:hover {
+    color: rgb(253, 112, 31);
+  }
+  
+  .header .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .socials {
+    display: flex;
+  }
+  
+  .socials li {
+    margin-bottom: 0;
+  }
+  
+  .socials a {
+    padding: 0 2px;
+  }
+  
+  .socials .icon {
+    height: 18px;
+  }
+  
+  .burger {
+    background: none;
+    border: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 1rem;
+  }
+  
+  .burger .bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background:rgb(229, 154, 129) ;
+  }
+  
+  .burger .bar::before,
+  .burger .bar::after {
+    display: block;
+    content: "";
+    width: 22px;
+    height: 3px;
+    background: rgb(229, 154, 129);
+    position: absolute;
+  }
+  
+  .burger .bar::before {
+    transform: translateY(-8px);
+  }
+  
+  .burger .bar::after {
+    transform: translateY(8px);
+  }
+  
+  @media screen and (max-width:749px) {
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: fixed;
+      top: 55px;
+      left: 110%;
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+      height: calc(100vh - 55px);
+      background: white;
+      transition: all .4s ease-out;
+    }
+  
+    nav .menu li {
+      display: flex;
+      justify-content: center;
+    }
+  
+    nav .menu a {
+      display: block;
+      font-size: 2rem;
+      padding: 2rem;
+      transition: all .4s;
+    }
+  
+    .show-nav nav {
+      opacity: 1;
+      width: 100%;
+      left: 0;
+      z-index: 2;
+    }
+  
+    .show-nav nav li a:hover {
+      transform: scale(1.1);
+      text-decoration: none;
+    }
+  
+    .show-nav .burger .bar {
+      width: 0;
+    }
+  
+    .burger .bar::before,
+    .burger .bar::after {
+      transition: all .2s ease-out;
+    }
+  
+    .show-nav .burger .bar::before {
+      transform: rotate(-45deg);
+    }
+  
+    .show-nav .burger .bar::after {
+      transform: rotate(45deg);
+    }
+  }
+  
+  @media screen and (min-width:750px) {
+    .navbar {
+      display: flex;
+      grid:100px ;
+    }
+  
+    .burger {
+      display: none;
+    }
+  }
+  
+
+
+/*°°°°°°°°°°°°°°°°°°°°°° début accueil*/
+/* ici on veut mettre une image en background sur toute cette partie et aligner le contenu horizontalement et els espacer  */
+section.accueil{
+    background:url("./images/parfait4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.accueil article{
+    display: block;
+    font-size: 1em;
+    line-height: 6em;
+    color: white;
+    max-width: 100%;
+    margin-left: 3%;
+    margin-top: 10%;
+}
+/* ici on veut travailler la police d'ecriture, lespacement entre les lignes l'emplacement du titre  */
+h1 {
+    font-style: helvetica;
+    font-size: 50px;  
+    font-family: monospace;
+    text-align: center;
+}
+/* ici on cherche à aligner toutes les icones horizontalement et à les espacer */
+section div{
+    display: flex; 
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+/* ici on veut donner à nos images une taille précise */
+section div img{
+    width:120px;
+    height:80px;
+}
+/* ici on veut travailler la police d'ecriture et l'emplacement du titre  */
+.italic{ 
+    font-style: helvetica;
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: center;
+
+}
+.italic2{
+    font-style: helvetica;
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: 300;
+    text-align: center;
+
+}
+
+@media (max-width: 786px) {
+  h1 {
+    font-size: 30px;  
+}
+ section div img{
+   width:58px;
+   height:40px;
+}
+  .italic{ 
+  font-size: 15px;
+}
+.italic2{
+  font-size: 9px;
+}
+section.accueil{
+  background-position: center;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  width: 100vw;
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+   
+}
