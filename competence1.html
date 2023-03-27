@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétence 1</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+          
+          html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+          }
+          body{
+            width: 100vw;
+            height: 100vh;
+          }
+        
+          h1{
+            text-align: center;
+            font-size: 36px;
+            font-family:Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
+            margin-top: 20px;
+          }
+          h2{
+            text-align: center;
+            font-size: 17px;
+            font-family:Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 40px;
+          }
+        
+          article{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            width:100vw;
+            text-align:center;
+          }
+          main{
+            display: grid;
+            grid-template-columns: 1fr  1fr 1fr;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            height: 500px;
+            size: 40px;
+        
+          }
+          div{
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            background-color:  rgb(183,135,135);
+            height: 45px;
+            width: 350px;
+            text-align: center;
+            border-radius:15px;
+            color: white;
+            border-color: rgb(253, 112, 31);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            size: 40px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 11px;
+          }
+         
+          .head{
+            background-color: rgb(155,85,87);
+            font-size: larger;
+            font-weight: bold;
+          }
+          .AutoEval{
+            display: flex;
+            flex-direction: row;
+            font-size: larger;
+            font-weight: bold;  
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        
+          .apprCritique {
+            display: flex;
+            text-align: start;
+            align-items: flex-start;
+            padding-top: 10px;
+            width:500px;
+            height: fit-content;
+            padding-left: 12px;
+            padding-right: 5px;
+            line-height: 13px;
+          }
+          
+          .eval{
+            color: rgb(119, 227, 119);
+            font-size: 13px;
+          }
+          .noteval{
+            color: rgb(225, 210, 210);
+          }
+          a{
+            text-decoration: none;
+          }
+    </style>
+
+</head>
+<body>
+    
+   <article>
+    <h1>Réaliser un développement d'application</h1>
+    <h2>"Développer — c’est-à-dire concevoir, coder, tester et intégrer — une solution informatique pour un client." </h2>
+        <main> 
+            <div class="head">Projets réalisés</div>
+            <div class="head ">Apprentissages critiques </div>
+            <div class="head">Auto-évaluation</div>
+            
+    
+            <a href="https://github.com/sadiya1804"><div>SAÉ 1.01 : Implémentation d’un besoin client</div></a>
+            <div class="apprCritique">
+                <p>AC1 : Implémenter des conceptions simples. </p> <br>
+                <p>AC2 : Faire des essais et évaluer leurs résultats en regard des spécifications.</p><br>
+                <p>AC3 : Développer des interfaces utilisateurs. </p> <br>
+                <p>AC4 : Élaborer des conceptions simples.</p> <br>
+            </div>
+    
+            <div class="AutoEval">
+                <div class="noteval">Exellent </div>
+                <div class="eval"> Moyen</div>
+                <div class="noteval">A améliorer</div>    
+            </div>
+    
+    
+            <a href="https://github.com/sadiya1804"><div>SAÉ 2.01 : Développement d’une application</div></a>
+            <div class="apprCritique">
+                <p>AC1 : Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences.</p><br>
+                <p>AC2 : Appliquer des principes d’accessibilité et d’ergonomie.</p><br>
+                <p>AC3 : Adopter de bonnes pratiques de conception et de programmation. </p> <br>
+                <p>AC4 : Vérifier et valider la qualité de l’application par les tests.</p> <br>
+            </div>
+    
+            <div class="AutoEval">
+                <div class="eval">Exellent</div>
+                <div class="noteval">Moyen</div>
+                <div class="noteval">A améliorer</div>  
+            </div>
+    
+    
+            <a href="https://github.com/sadiya1804"><div>A venir</div></a>
+            <div class="apprCritique">
+                <p>AC1 : Choisir et implémenter les architectures adaptées.</p> <br>
+                <p>AC2 : Faire évoluer une application existante. </p> <br>
+                <p>AC3 : Intégrer des solutions dans un environnement de production.</p> <br>  
+            </div>
+    
+            <div class="AutoEval">
+                <div class="noteval">Exellent </div>
+                <div class="noteval"> Moyen</div>
+                <div class="noteval">A améliorer</div>   
+            </div>
+
+        </main>
+       
+   </article> 
+    
+
+</body>
+</html>

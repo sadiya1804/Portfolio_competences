@@ -1,0 +1,98 @@
+/*°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°° partie a propos*/
+
+/* ici on veut travailler la police d'ecriture et la taille du titre   */
+h2{
+    font-size: 36px;
+    font-family:monospace;
+}
+/* ici on veut faire du grid sur un élément parent en créant plusieurs lignes et colonnes, on définit aussi la taille qu'occupe cette partie sur l'écran
+et on définit l'emplacement des eléments enfants de ce container */
+article.container1{
+   display: grid;
+   padding: 80px 0px 60px 0px;
+   max-width: 85%;
+   height: 100vh;
+}
+/* ici on definit le nombre de colonnes et de lignes que prendra le premier élément enfant, sa taille, l'espacement entre les lignes ainsi que son emplacement */
+div.item1{
+   padding-left:250px ;
+   grid-column: 2/ 3;
+   grid-row: 1 / 5;
+   font-size: 15px;
+   font-weight: lighter;
+   font-family: monospace;
+   line-height: 20px;
+}
+/* ici on definit le nombre de colonnes et de lignes que prendra le 2e élément enfant, sa taille,ainsi que son emplacement */
+div.item2{
+
+   grid-column: 3 / span 4;
+   grid-row: 1 / span 3;
+
+}
+/* ici on définitla alrgeur et longueur de l'image */
+.container1 div img {
+    width: 250px;
+    height: 395px;
+}
+/* ici on definit la taille des paragraphe et l'espacement entre les lignes de cette partie  */
+article p{
+    font-size: 17px; 
+    font-weight: lighter;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 27px;
+}
+
+div span{
+    font-weight: lighter;
+    font-size: 18px;
+    font-family:'Montserrat';
+    line-height: 30px;
+}
+
+@media (max-width: 786px) {
+   
+    article.container1{
+        display: grid;
+        padding: 0;
+        max-width:fit-content;
+        height: 100vh;
+        justify-items: center;
+        align-items: center;
+     }
+
+     div.item1{
+        padding-left:10px ;
+        grid-column: 2/ 3;
+        grid-row: 1 / 5;
+        font-size: 8px;
+        font-weight: lighter;
+        font-family: monospace;
+        line-height: 10px;
+     }
+     /* ici on definit le nombre de colonnes et de lignes que prendra le 2e élément enfant, sa taille,ainsi que son emplacement */
+     div.item2{
+        margin-right: 10px;
+        grid-column: 3 / span 4;
+        grid-row: 1 / span 3;
+     
+     }
+     .container1 div img {
+        width: 120px;
+        height: 200px;
+    }
+    article p{
+        font-size: 10px; 
+        font-weight: lighter;
+        font-family: 'Montserrat';
+        line-height: 11px;
+    }
+
+    div span{
+        font-weight: lighter;
+        font-size: 8px;
+        font-family:'Montserrat';
+        line-height: 20px;
+    }
+
+}
